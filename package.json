@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Our 2018 H@B project",
   "engines": {
-    "node": "8.9.1"
+    "node": "8.6.0"
   },
   "main": "node_server/server.js"
 }
