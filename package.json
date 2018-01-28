@@ -5,5 +5,5 @@
   "engines": {
     "node": "8.9.1"
   },
-  "main": "server.js"
+  "main": "node_server/server.js"
 }
