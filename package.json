@@ -7,7 +7,7 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "addressparser": {
