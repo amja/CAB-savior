@@ -5,9 +5,9 @@
   "engines": {
     "node": "8.6.0"
   },
-  "main": "node_server/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node_server/server.js"
+    "start": "server.js"
   },
   "dependencies": {
     "addressparser": {
