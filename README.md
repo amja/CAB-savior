@@ -1,2 +1,2 @@
 # CAB-savior
-hack @ brown 2018 !!
+The backend for CAB-savior, our Hack@Brown 2018 project.
