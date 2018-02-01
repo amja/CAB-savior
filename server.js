@@ -45,7 +45,7 @@ var server = http.createServer(function(req, res) {
 	// Gets parameters from url and checks if there is one for course code.
 	var code = "";
 	var params = new URLSearchParams(req.url.substr(2));
-	var emailSupplied = false;
+	var emailSupplied = "";
 	// Iterates to search for course_code.
 	for (const [name, value] of params) {
 	  if(name == "course_code") {
@@ -65,7 +65,7 @@ var server = http.createServer(function(req, res) {
 	  		}
 	  	}
 	  } else if(name == "email") {
-	  	emailSupplied = true;
+	  	emailSupplied = value;
 	  }
 	}
 
@@ -101,10 +101,8 @@ var server = http.createServer(function(req, res) {
 				if(parsed['error'] != null) {
 					returnData['error'] = "Course not found";
 				} else {
-					if(emailSupplied) {
-						email_addr = value;
-						send_email(email_addr, parsed.course.title, parsed.course.code);
-						res.writeHead(400);
+					if(emailSupplied != "") {
+						send_email(emailSupplied, parsed.course.title, parsed.course.code);
 						return true;
 					}
 					// Adds basic course data to the JSON object.
