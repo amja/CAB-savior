@@ -2,14 +2,13 @@ var http = require('http');
 var https = require('https');
 const { URL, URLSearchParams } = require('url');
 var email = require("emailjs");
-var secrets = require("./secrets.js");
 var email_addr = "";
 
 // TODO: Fix this send email function.
 function send_email(email_addr, title, code) {
 	var server = email.server.connect({
 	   user:    "cabsavior@gmail.com", 
-	   password: secrets.password, 
+	   password: process.env.PASSWORD, 
 	   host:    "smtp.gmail.com", 
 	   ssl:     true
 	});
