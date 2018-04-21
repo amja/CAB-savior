@@ -29,6 +29,7 @@ function get_term_code() {
 	if (time.getMonth() >= 10 || time.getMonth() < 4) {
 		code = (time.getFullYear()-1).toString() + "20";
 	} else {
+		console.log("winter!!");
 		code = time.getFullYear().toString() + "10";
 	}
 	return code;
