@@ -15,10 +15,10 @@ function send_email(email_addr, title, code) {
 
 	// send the message and get a callback with an error or details of the message that was sent
 	server.send({
-	   text:    code + ": " + title + " has a new opening! Check the chrome extension for details", 
+	   text:    code + ": " + title + " has a new opening! Check the chrome extension or CAB for details", 
 	   from:    "CAB Savior <cabsavior@gmail.com>", 
 	   to:      email_addr,
-	   subject: "A space has has opened up!"
+	   subject: "A space has has opened up in" + code + "!"
 	}, function(err, message) { console.log(err || message); });
 }
 
