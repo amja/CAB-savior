@@ -111,7 +111,7 @@ var server = http.createServer(function(req, res) {
 							returnData['sections'][i] = {};
 							returnData['sections'][i]['no'] = section.no;
 							returnData['sections'][i]['capacity'] = section.capacity;
-							returnData['sections'][i]['avail'] = section.avail;
+							returnData['sections'][i]['avail'] = 10;
 							returnData['sections'][i]['meet'] = section.meet;
 						}
 					});
