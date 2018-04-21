@@ -26,16 +26,11 @@ function send_email(email_addr, title, code) {
 function get_term_code() {
 	var code = "";
 	var time = new Date();
-	if (time.getMonth() == 11 && time.getDate() > 15) {
-		code = time.getFullYear().toString() + "15";
-	} else if (time.getMonth() < 4) {
+	if (time.getMonth() < 4) {
 		code = (time.getFullYear()-1).toString() + "20";
-	} else if (time.getMonth() < 7 && time.getMonth() >= 4) {
-		code = time.getFullYear().toString() + "00";
-	} else if (time.getMonth() >= 7) {
+	} else if (time.getMonth() >= 4) {
 		code = time.getFullYear().toString() + "10";
 	}
-
 	return code;
 }
 
