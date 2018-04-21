@@ -32,7 +32,6 @@ function get_term_code() {
 	} else {
 		code = time.getFullYear().toString() + "10";
 	}
-	console.log(code);
 	return code;
 }
 
