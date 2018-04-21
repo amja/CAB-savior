@@ -26,9 +26,9 @@ function send_email(email_addr, title, code) {
 function get_term_code() {
 	var code = "";
 	var time = new Date();
-	if (time.getMonth() < 4) {
+	if (time.getMonth() >= 10 || time.getMonth() < 4) {
 		code = (time.getFullYear()-1).toString() + "20";
-	} else if (time.getMonth() >= 4) {
+	} else {
 		code = time.getFullYear().toString() + "10";
 	}
 	return code;
