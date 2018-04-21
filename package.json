@@ -10,6 +10,6 @@
     "start": "node server.js"
   },
   "dependencies": {
-  	"emailjs":"*"
+    "emailjs": "^2.0.0"
   }
 }
